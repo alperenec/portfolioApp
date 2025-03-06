@@ -34,7 +34,6 @@ function Home() {
         <div className={homecss.home_image}>
           <img src={myImage} alt="alperenemrecandan" />
 
-          {/* Orbit container: add all icons here */}
           <div className={homecss.orbit_container}>
             <FaReact className={homecss.home_image_icon} />
             <FaNodeJs className={homecss.home_image_icon} />
