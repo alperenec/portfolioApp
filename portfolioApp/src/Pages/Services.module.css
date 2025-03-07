@@ -56,14 +56,30 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(245, 195, 44, 0.9); /* Sarı perde */
-    transition: transform 0.3s ease; /* Yumuşak geçiş */
+    background: linear-gradient(to bottom right, rgba(245, 195, 44, 0.6) 30%, black 100%);
+    transition: transform 0.4s ease; /* Yumuşak geçiş */
     transform: translateY(0); /* Başlangıçta görünür */
 }
 
-.service_item:hover .curtain {
-    transform: translateY(-100%); /* Hover'da yukarı kayar */
+/* Sarı perde */
+/* Sarı perde */
+.curtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sağ altta sarı, sol üstte siyah olacak şekilde ayarlandı */
+    background: linear-gradient(to top left, rgba(245, 195, 44, 0.6) 30%, black 100%);
+    transform-origin: bottom right; /* Pivot: sağ alt köşe */
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
 }
+
+.service_item:hover .curtain {
+    transform: rotate(80deg); /* Hover durumunda sağ alt pivot etrafında dairesel kayma */
+}
+
 
 /* Overlay (yazılar) */
 .overlay {
@@ -71,11 +87,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Yarı şeffaf koyu arka plan */
+    background: rgba(0, 0, 0, 0.8); /* Yarı şeffaf koyu arka plan */
     padding: 20px;
     text-align: left;
     transform: translateY(100%); /* Başlangıçta gizli */
-    transition: transform 0.3s ease; /* Yumuşak geçiş */
+    transition: transform 0.4s ease; /* Yumuşak geçiş */
 }
 
 .service_item:hover .overlay {

@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import navcss from "./Nav.module.css";
+import logo from "../../assets/logo.png";
 
 function Nav() {
   const menu = useRef();
@@ -9,8 +10,8 @@ function Nav() {
 
   return (
     <nav>
-      <div className={navcss.logo}>
-        <span>AlperenEmre</span>
+      <div>
+        <img src={logo} alt="Logo" width="100" height="100" />
       </div>
       <ul ref={menu}>
         <li>
