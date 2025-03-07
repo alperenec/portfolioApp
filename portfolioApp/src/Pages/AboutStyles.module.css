@@ -1,0 +1,183 @@
+.about_section {
+    padding: 80px 12%;
+    text-align: center;
+    background-color: #121212;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about_section h2 {
+    font-size: 48px;
+    color: var(--primary-color, #f5c32c);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about_section p {
+    font-size: 18px;
+    color: #bbb;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+/* Experience section with circle, text, and cards */
+.experience_wrapper {
+    display: flex;
+    flex-direction: row; /* Yatay hizalama */
+    align-items: center; /* Dikeyde ortalanma */
+    justify-content: center; /* Yatayda ortalanma */
+    gap: 30px; /* Elemanlar arası boşluk */
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.experience_circle {
+    width: 220px;
+    height: 220px;
+    background: #d4a017;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(245, 195, 44, 0.5);
+}
+
+.experience_circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.years {
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.experience_subtext {
+    color: #ddd;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.experience_text {
+    text-align: center;
+    flex: 0 0 auto; /* Sabit genişlik */
+}
+
+.experience_text h3 {
+    font-size: 26px;
+    color: var(--primary-color, #f5c32c);
+    margin-bottom: 5px;
+}
+
+/* Cards section */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Kartlar arası boşluk */
+    flex: 1; /* Kartlar kalan alanı doldursun */
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    max-width: 300px; /* Kart genişliğini sınırla */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(245, 195, 44, 0.3);
+}
+
+.icon_container {
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 40px;
+    color: var(--primary-color, #f5c32c);
+}
+
+.card h3 {
+    color: var(--primary-color, #f5c32c);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.read_more {
+    background-color: var(--primary-color, #f5c32c);
+    color: #121212;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read_more:hover {
+    background-color: #d4a017;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .experience_wrapper {
+        flex-direction: column; /* Mobil cihazlarda dikey hizalama */
+        align-items: center;
+    }
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .experience_wrapper {
+        flex-direction: row; /* Masaüstünde yatay hizalama */
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .experience_text {
+        text-align: left;
+    }
+}

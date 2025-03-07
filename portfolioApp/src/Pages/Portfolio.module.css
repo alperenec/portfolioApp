@@ -1,0 +1,129 @@
+.portfolio_section {
+    padding: 80px 12%;
+    text-align: center;
+    background-color: #121212; /* Koyu arka plan */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subheading {
+    font-size: 16px;
+    color: var(--primary-color, #f5c32c); /* Sarı renk */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.portfolio_section h2 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.expertise_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Kartlar arası boşluk */
+}
+
+.expertise_item {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a; /* Koyu kart arka planı */
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px; /* İkon ve içerik arası boşluk */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise_item:hover {
+    transform: translateY(-5px); /* Hover'da hafif yükselme */
+    box-shadow: 0 10px 20px rgba(245, 195, 44, 0.2); /* Sarı gölge efekti */
+}
+
+.icon_container {
+    width: 50px;
+    height: 50px;
+    background: rgba(245, 195, 44, 0.1); /* Sarı şeffaf arka plan */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* İkon boyutu sabit kalsın */
+}
+
+.icon {
+    font-size: 24px;
+    color: var(--primary-color, #f5c32c); /* Sarı renk */
+}
+
+.content {
+    flex: 1; /* İçerik kalan alanı doldursun */
+    text-align: left;
+}
+
+.title_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.content h3 {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+}
+
+.percentage {
+    font-size: 18px;
+    color: var(--primary-color, #f5c32c); /* Sarı renk */
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsiflik için medya sorguları */
+@media (max-width: 768px) {
+    .expertise_item {
+        flex-direction: column; /* Mobilde dikey hizalama */
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .title_wrapper {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio_section h2 {
+        font-size: 36px; /* Küçük ekranlarda başlık boyutunu küçült */
+    }
+
+    .expertise_item {
+        padding: 15px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}

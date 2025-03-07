@@ -34,6 +34,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 3;
+
 }
 
 .home_wrapper .home_image img {
@@ -42,6 +44,8 @@
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid #fdc448;
+    z-index: 3;
+
 }
 
 .home_wrapper .orbit_container {
@@ -57,6 +61,8 @@
     transform-style: preserve-3d; 
     animation: orbit 10s infinite linear;
     transform-origin: center;
+    z-index: 3;
+
 }
 
 .home_wrapper .home_image_icon {
@@ -76,6 +82,7 @@
                 0 0 30px rgba(253, 196, 72, 0.3);
     animation: float 5s infinite ease-in-out; 
     transform-style: preserve-3d;
+    z-index: 3;
 }
 
 .home_wrapper .home_image_icon:nth-child(1) {
@@ -113,6 +120,7 @@
 .home_wrapper .home_image_icon:nth-child(9) {
     transform: translate(-50%, -50%) rotate(320deg) translateX(240px) translateZ(10px) rotate(-320deg);
 }
+
 @keyframes orbit {
     from {
         transform: translate(-50%, -50%) rotate(0deg);

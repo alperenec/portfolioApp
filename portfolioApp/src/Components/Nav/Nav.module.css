@@ -1,104 +1,92 @@
-nav{
+nav {
     display: flex;
-    align-items:    center;
-    justify-content: space-between; 
-
+    align-items: center;
+    justify-content: space-between;
     height: 80px;
     width: 100%;
-
     padding: 0 12%;
-
     position: relative;
+    background: #1a1a1a;
 }
-
-nav .logo span{
+  
+nav .logo span {
     font-size: 30px;
-    font-weight: 800;   
+    font-weight: 800;
     color: var(--primary-color);
 }
-
-body{
-    background-color: black;
-}
-
-:root{
-    --primary-color: #fdc448;
-
-}
-
-nav ul li{
+  
+nav ul li {
     display: inline-block;
     margin: 0 12px;
-
 }
-
-nav ul li a{
+  
+nav ul li a {
     color: white;
 }
-
-nav ul li:hover a{
+  
+nav ul li:hover a {
     color: var(--primary-color);
 }
-
-nav .navBtns{
+  
+nav .navBtns {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
-nav .navBtns .social{
+  
+nav .navBtns .social {
     display: flex;
     gap: 10px;
 }
-
-nav .navBtns i{
+  
+nav .navBtns i {
     height: 40px;
     width: 40px;
     background-color: var(--primary-color);
-
     display: flex;
-
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-
     transition: 0.6s;
 }
-
-
-nav .navBtns i:hover{
+  
+nav .navBtns i:hover {
     background-color: transparent;
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
-
-
+  
 .bars {
     display: none;
 }
+  
 @media screen and (max-width: 900px) {
     .bars {
-        display: flex;
+      display: flex;
     }
-
-    nav ul{
-        position: absolute;
-        top:100%;
-        left: -100%;
-        transition: 0.6s;
-
+  
+    nav ul {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      transition: 0.6s;
+      background: #1a1a1a;
+      width: 100%;
     }
-    nav ul li{
-        display: block;
-        padding: 20px 0;
-        padding-left: 12% !important;
-        border-bottom: 0.2px    solid rgba(131, 131, 131, 0.2)
+  
+    nav ul li {
+      display: block;
+      padding: 20px 0;
+      padding-left: 12% !important;
+      border-bottom: 0.2px solid rgba(131, 131, 131, 0.2);
     }
-    nav ul li:first-of-type{
-        border-top: 0.2px    solid rgba(131, 131, 131, 0.2);
+  
+    nav ul li:first-of-type {
+      border-top: 0.2px solid rgba(131, 131, 131, 0.2);
     }
-
-    nav .showMenu{
-        left: 0;
+  
+    nav .showMenu {
+      left: 0;
     }
 }
+    
